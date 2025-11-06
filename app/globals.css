@@ -1,42 +1,5 @@
-body {
-  margin: 0;
-  height: 100vh;
-  background-image: url('코믹17_027.jpg'); /* 실제 경로 확인 */
-  background-size: cover;      /* 화면에 꽉 채움 */
-  background-position: center; /* 가운데 정렬 */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: flex;               /* 중앙 정렬용 */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #76bf41;                /* 글씨 색 */
-  font-family: 'Just Another Hand', cursive;
-  font-size: 28px;
+@import "tailwindcss";
 
-  align-items: center;
-  text-align: center;      
-}
-    
+@layer components {
 
-h1 {
-  font-size: 3em;
-  letter-spacing: 2px;
-  background: rgba(0, 0, 0, 0.11); /* 글자 뒤 반투명 블록 */
-  padding: 20px 40px;
-  border-radius: 10px;
-}
-
-a {
-  color: #76bf41;
-  text-decoration: none;
-  margin-top: 20px;
-  background: rgba(0, 0, 0, 0.788);
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-a:hover {
-  background: rgba(255, 255, 255, 0.3);
 }
