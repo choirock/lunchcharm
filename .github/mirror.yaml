@@ -1,0 +1,31 @@
+name: Mirror to vercel-pages
+
+on:
+  push:
+    branches:
+      # 여기서 'main'을 lunchcharm 레포의 기본 브랜치 이름으로 변경하세요.
+      - main 
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. lunchcharm 레포의 코드를 체크아웃합니다.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 모든 커밋 히스토리를 가져옵니다.
+
+      # 2. 1단계에서 등록한 비공개 키로 SSH를 설정합니다.
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      # 3. vercel-pages 레포로 코드를 강제 푸시합니다.
+      - name: Push to vercel-pages
+        run: |
+          git remote add mirror git@github.com:choirock/vercel-pages.git
+          git push mirror main --force
