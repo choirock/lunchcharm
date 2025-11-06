@@ -1,3 +1,3 @@
 # Lunchcharm
 
-Made by Choi Rock.
+Made by Choi Rock
