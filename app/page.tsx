@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <div className="flex flex-col min-h-full">
       <div className="grow">
-        <div className="text-lime-600 text-center text-3xl font-bold">ChoiRock.</div>
+        <div className="text-lime-600 text-center text-6xl cheetos-text">ChoiRock.</div>
         <Card>
           <Image src="/card.png" width={150} height={150} alt="메인 카드"/>
         </Card>
@@ -25,7 +25,7 @@ export default function Page() {
             <FontAwesomeIcon icon={faEnvelope} />
           </Link>
         </div>
-        <div className="text-green-600 text-center text-2xl mt-17 font-semibold">멀티아티스트</div>
+        <div className="text-green-600 text-center text-2xl mt-12 font-semibold">멀티아티스트</div>
         <div className="text-green-600 text-center text-2xl mt-3 font-semibold">만화 에니메이션 작가</div>
       </div>
       <div className="grid gap-2">
