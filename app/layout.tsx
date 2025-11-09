@@ -15,7 +15,7 @@ export default function Layout({children}: {children: ReactNode}) {
             priority
           />
         </div>
-        <main className="mx-auto py-10 p-6 max-w-3xl h-svh">
+        <main className="mx-auto py-10 pb-15 p-6 max-w-3xl h-svh">
           {children}
         </main>
       </body>
